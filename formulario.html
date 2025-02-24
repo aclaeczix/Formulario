@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Formulario</title>
+</head>
+<body>
+    <div class="container">
+
+        <div id="titulo"> <header><center>Formulario</center></header> </div>
+     <div id="Instruc"><p>Llena los campos siguientes con tus datos y crea tu cuenta con las especificaciones predeterminadas</p></div>
+        
+     <div id="preguntas"><b>Nombre*: <input type="text" placeholder="Nombre" oninput="eliminarNumeros(this)" id="nombre" required>
+        <script>
+            function eliminarNumeros(input) {
+            input.value = input.value.replace(/[0-9]/g, '');
+            }
+        </script></b> <br>
+      <b>Numero de cuenta*:<input type="text" id="cuenta" placeholder="·  ·  ·  ·  ·  ·  ·  ·  ·" maxlength="9" pattern="[0-9]{9}" oninput="validarCuenta(this)">
+        <script>
+            function validarCuenta(input) {
+            input.value = input.value.replace(/[^0-9]/g, ''); 
+            }
+        </script></b> <br>
+    
+       <b>Correo electrónico:<input type="email" placeholder="correo@email.com"></b> 
+        <b>Telefono<input type="tel" id="telefono10" placeholder="*  *  *  *  *  *  *  *  *  *" maxlength="10" pattern="\d{10}" oninput="validarTelefono10(this)">
+            <script>
+                function validarTelefono10(input) {
+                input.value = input.value.replace(/[^0-9]/g, ''); 
+                }
+            </script></b><br>
+    
+        <b>Carrera:
+            <select name="Carrera" id="carrera1">
+                <option value="buscar"></option>
+                <option value="Arquitectura">Arquitectura</option>
+                <option value="Comunicacion y Periodismo">Comunicacion y Periodismo</option>
+                <option value="Derecho">Derecho</option>
+                <option value="Diseño industrial">Diseño Industrial</option>
+                <option value="Economia">Economia</option>
+                <option value="Ingenieria Civil">Ingeniera Civil</option>
+                <option value="Ingenieria Electrica Electronica">Ingenieria Electrica Electronica</option>
+                <option value="Ingenieria en Computacion">Ingenieria en Computacion</option>
+                <option value="Ingenieria Industrial">Ingenieria Industrial</option>
+                <option value="Ingenieria Mecanica">Ingenieria Mecanica</option>
+                <option value="Relaciones Internacionales">Relaciones Internacionales</option>
+                <option value="Pedagogía">Pedagogía</option>
+                <option value="Planificacion para el desarrollo agropecuario">Planificacion para el desarrollo agropecuario</option>
+            </select></b><br>
+    
+       <b>Generación: 
+        <select name="Generacion" id="generacion1">
+            <option value="buscar"></option>
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+            <option value="2025">2025</option>
+        </select></b> <br>
+    
+        <b>Dirección: <input type="text" placeholder="Dirección"></b><br>
+        <b>Género: <br><input type="radio" name="Genero" id="Masculino">
+            <label for="Masculino">Masculino</label><br>
+            <input type="radio" name="Genero" id="Femenino">
+            <label for="Femenino">Femenino</label><br>
+            <input type="radio" name="Genero" id="Otro">
+            <label for="Otro">Otro/Prefiero no decirlo</label></b><br>
+    
+        
+       <div id="Cuenta"><p><b>Crea tu cuenta </b></p>
+        Usuario: <input type="text" placeholder="Usuario">
+        Contraseña:<input type="password" placeholder="·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·">
+        <input type="submit" value="Enviar" /></div>
+        
+    </div>
+       
+
+    
+
+    </div>
+    
+</body>
+</html>
